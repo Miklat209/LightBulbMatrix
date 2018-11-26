@@ -61,10 +61,14 @@ void setPixel(int x, int y, bool color) {
 
 void setFrame(const uint8_t *frame)
 {
+    Serial.println("setting frame");
     for (int y=0; y<rows; y++) {
         for (int x=0; x<cols; x++) {
-            setPixel(x,y,getPixel(frame, x, y));
+            bool b = getPixel(frame, x, y);
+            setPixel(x,y,b);
+            //Serial.print(b ? "N" : "f");
         }
+        //Serial.println();
     }
 }
 
@@ -75,19 +79,27 @@ void setup()
     digitalWrite(txEnPin, LOW);
     Serial1.begin(19200);
     // put your setup code here, to run once:
+    boardNum = 0;
     for (int i=0; i<switchNum; i++) {
         pinMode(switchPins[i], INPUT_PULLUP);
         boardNum <<= 1;
         boardNum |= digitalRead(switchPins[i]) == LOW ? 1 : 0;
     }
+    Serial.println(boardNum);
 }
 
 void loop()
 {
     const char *generalBitmapAsString = charLineComm.getNextLine(); // no delays while processing
     uint8_t frame[cols];
+    //Serial.println(strlen(generalBitmapAsString));
+    //Serial.println(generalBitmapAsString);
+    //Serial.println("blah");
     generalBitmapAsString += boardNum * cols;
+    Serial.println("blah");
     for (int i=0; i < cols; i++, generalBitmapAsString++) {
+        Serial.print("setting col ");
+        Serial.println(i);
         frame[i] = uint8_t(*generalBitmapAsString - '1');
     }
     // processing ended, now we can doe delay with polls
