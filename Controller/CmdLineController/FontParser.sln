@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeWordsSketch", "FontParser\MakeWordsSketch.csproj", "{BF308085-BFDD-471B-9A09-A893602E53E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{62176CBB-8888-4B11-ACE8-27B2F43AAE95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF308085-BFDD-471B-9A09-A893602E53E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF308085-BFDD-471B-9A09-A893602E53E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF308085-BFDD-471B-9A09-A893602E53E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF308085-BFDD-471B-9A09-A893602E53E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9D4B1ED-DCDA-4067-A638-592721ECE70C}
+	EndGlobalSection
+EndGlobal
